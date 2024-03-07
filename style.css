@@ -1,3 +1,13 @@
 html {
-    background-color: lightgreen;
+    background-color: lightblue;
+}
+
+fieldset {
+    border: solid red 2px;
+    margin: 1em;
+    background-color: white;
+}
+
+:invalid {
+    background-color: red;
 }

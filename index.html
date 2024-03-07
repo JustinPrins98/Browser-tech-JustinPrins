@@ -13,11 +13,8 @@
     <!-- Text input namen-->
     <form action="">
         <fieldset>
-            <label> Voornaam
+            <label> Naam
                 <input type="text" name="Voornaam" placeholder="Vul hier je voornaam in">
-            </label>
-            <label> Achternaam
-                <input type="text" name="Achternaam" placeholder="Vul hier je achternaam">
             </label>
         </fieldset>
     </form>
@@ -26,7 +23,7 @@
     <form action="">
         <fieldset>
             <label> BSN
-                <input type="text" maxlength="9" placeholder="Vul hier je BSN nummer in">
+                <input type="text" pattern="\d{1,9}" placeholder="Vul hier je BSN nummer in">
             </label>
         </fieldset>
     </form>
@@ -34,44 +31,143 @@
     <!-- Datumen -->
     <form action="">
         <fieldset>
-            <label> Datum
-                <input type="date" value="2023-06-01" id="dateInput" max="">
+            <label> Datum overlijden
+                <input type="date" id="datePickerId">
             </label>
         </fieldset>
     </form>
 
     <!-- Radio buttons -->
-
-
+    <form action="">
+        <fieldset>
+            <input type="radio" name="contact" />
+            <label for="contact"> Ja</label>
+            <input type="radio" name="contact" />
+            <label for="contact"> Nee </label>
+        </fieldset>
+    </form>
 
     <!-- Protocolnummer -->
+    <form action="">
+        <fieldset>
+            <label for=""> Protocolnummer
+                <input type="text" name="protocolnummer" placeholder="Vul hier het protocolnummer van je notaris in"
+                    size="36">
+            </label>
+        </fieldset>
+    </form>
     <!-- Beconnummer -->
 
+    <form action="">
+        <fieldset>
+            <label for=""> Beconnummer
+                <input type="text" name="protocolnummer" pattern="\d{1,5}"
+                    placeholder="Vul hier het protocolnummer van je notaris in" size="36">
+            </label>
+        </fieldset>
+    </form>
+
     <!-- Plaats -->
+    <form action=""></form>
+    <fieldset>
+        <label for=""> Plaats
+            <input type="text" name="Plaatsnaam" id="">
+        </label>
+    </fieldset>
 
     <!-- Adres -->
+    <form action=""></form>
+    <fieldset>
+        <label for=""> Adres
+            <input type="url" name="Adres" id="">
+        </label>
+    </fieldset>
 
     <!-- Tel -->
+    <form action=""></form>
+    <fieldset>
+        <label for=""> Telefoon
+            <input type="tel" name="tel" id="">
+        </label>
+    </fieldset>
 
     <!-- Email -->
+    <form action="">
+        </forsm>
+        <fieldset>
+            <label for=""> Email
+                <input type="email" name="email" id="">
+            </label>
+        </fieldset>
 
-    <!-- Radio button/aantallen -->
+        <!-- RSIN -->
+        <form action="">
+            <fieldset>
+                <label> RSIN
+                    <input type="text" pattern="\d{1,9}" placeholder="Vul hier je BSN nummer in">
+                </label>
+            </fieldset>
+        </form>
 
-    <!-- Handtekening -->
+        <!-- breuk/ percentage -->
+        <form action="">
+            <fieldset>
+                <label> Breuk
+                    <input type="text" pattern="\d{1,9}" placeholder="Vul hier je BSN nummer in">
+                </label>
+                <label> Percentage
+                    <input type="text" pattern="\d{1,9}" placeholder="Vul hier je BSN nummer in">
+                </label>
+            </fieldset>
+        </form>
 
-    <!-- RSIN -->
+        <!-- Geldbedrag-->
+        <form action="">
+            <fieldset>
+                <label> Geldbedrag
+                    <span>€:
+                        <input type="text" pattern="^€.*" pattern="[0-9]{1,999}(?:,[0-9]{2})?"
+                            placeholder="Vul hier het geldbedrag in">
+                    </span>
+                </label>
+            </fieldset>
+        </form>
 
-    <!-- breuk/ percentage -->
 
-    <!-- Geldbedrag-->
+        <!-- omschrijving -->
+        <form action="">
+            <fieldset>
+                <label> Omschrijving
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </label>
+                <input type="submit">
+            </fieldset>
+        </form>
 
-    <!-- omschrijving -->
+        <!-- kadastrale perceel aanduiding -->
+        <form action="/submit" method="post">
+            <fieldset>
+                <label for="kadastraalNummer"> Kadasteale Perceelaanduiding
+                    <input type="text" id="kadastraalNummer" name="kadastraalNummer"
+                        placeholder="Voer kadastraal nummer in">
+                </label>
+            </fieldset>
+        </form>
 
-    <!-- kadastrale perceel aanduiding -->
+        <!-- oppervlakte m2-->
+        <form action="">
+            <fieldset>
+                <label for="oppervlakte"> Oppervlakte
+                    <input type="number" id="Oppervlaktem2" name="oppervlakte"
+                        placeholder="Voer hier het oppervlakte m2 in"> <span>M2</span>
+                </label>
+            </fieldset>
+        </form>
 
-    <!-- oppervlakte m2-->
 
-    <script src="./script.js"></script>
+        <!-- Handtekening -->
+
+        <script src="./script.js"></script>
 </body>
 
 </html>
