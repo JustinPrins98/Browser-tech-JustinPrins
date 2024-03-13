@@ -11,3 +11,7 @@ fieldset {
 :invalid {
     background-color: red;
 }
+
+#additionalInfoFieldset {
+    display: none;
+}

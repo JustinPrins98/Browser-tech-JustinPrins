@@ -10,6 +10,256 @@
 
 <body>
 
+    <form action="">
+        <section>
+            <h2> 1. Gegevens van overledenen </h2>
+        </section>
+        <fieldset>
+            <legend>
+                <p>1a</p>
+            </legend>
+            <label>
+                <p>Naam:</p>
+                <input type="text" name="Naam" placeholder="Vul hier je volledige naam in" size="36">
+            </label>
+            <label>
+                <p>BSN:</p>
+                <input type="text" pattern="\d{1,9}" placeholder="Vul hier je BSN nummer in">
+            </label>
+            <label>
+                <p>Datum overlijden:</p> <input type="date" id="datePickerId">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>1b</legend>
+            <label for="">
+                <p>Was de overledene getrouwd of had de overledene een
+                    geregistreerd partner op het moment van overlijden?</p>
+            </label>
+            <input type="radio" name="1.1b" onclick="showFieldset()" />
+            <label for="1.1b"> Ja</label>
+            <input type="radio" name="1.1b" onclick="hideFieldset()" />
+            <label for="1.1b"> Nee ga verder naar C1 </label>
+
+            <fieldset id="additionalInfoFieldset" style="display: block;">
+                <label for="">
+                    <p>Hadden de overledene en diens echtgenoot of
+                        geregistreerd partner huwelijkse of partnerschapsvoorwaarden
+                        laten vastleggen
+                        in een notariële akte?</p>
+                </label>
+                <input type="radio" name="1.2b" />
+                <label for="1.2b"> Ja</label>
+                <input type="file">
+                <input type="radio" name="1.2b" />
+                <label for="1.2b"> Nee </label>
+
+                <label for="">
+                    <p>Hadden de overledene en diens partner een finaal
+                        verrekenbeding?</p>
+                </label>
+                <input type="radio" name="1.3b" />
+                <label for="1.3b"> Ja</label>
+                <input type="radio" name="1.3b" />
+                <label for="1.3b"> Nee </label>
+
+                <label>
+                    <p> Datum huwelijkse of partnerschapsvoorwaarden</p>
+                    <input type="date">
+                </label>
+
+            </fieldset>
+        </fieldset>
+
+        <fieldset>
+            <legend>1c</legend>
+
+            <label for="">
+                <p>Had de overledene kinderen?</p>
+            </label>
+            <input type="radio" name="1.1c" />
+            <label for="1.1c"> Ja</label>
+            <input type="radio" name="1.1c" />
+            <label for="1.1c"> Nee. Ga verder met vraag 1d. </label>
+
+
+            <label for="">
+                <p>Is 1 van deze kinderen eerder overleden dan de
+                    overledene voor wie u nu aangifte doet?</p>
+            </label>
+            <input type="radio" name="1.2c" />
+            <label for="1.2c"> Ja</label>
+            <input type="radio" name="1.2c" />
+            <label for="1.2c"> Nee. Ga verder met vraag 1d. </label>
+
+
+            <label for="">
+                <p>Had dit overleden kind zelf kinderen??</p>
+            </label>
+            <input type="radio" name="1.3c" />
+            <label for="1.3c"> Ja</label>
+            <input type="radio" name="1.3c" />
+            <label for="1.3c"> Nee </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>1d</legend>
+            <label for="">
+                <p>Had de overledene een testament?</p>
+            </label>
+            <input type="radio" name="1.1d" />
+            <label for="1.1d"> Ja</label>
+            <input type="radio" name="1.1d" />
+            <label for="1.1d"> Nee. Ga verder met vraag 2. </label>
+
+            <label for="">
+                <p>Protocolnummer notaris:</p>
+                <input type="text" name="protocolnummer" placeholder="Vul hier het protocolnummer van je notaris in"
+                    size="36">
+            </label>
+            <label>
+                <p>Naam:</p>
+                <input type="text" name="Naam" placeholder="Vul hier je volledige naam in" size="36">
+            </label>
+            <label>
+                <p>Vestigingsplaats: </p>
+                <input type="text" name="Plaatsnaam" placeholder="Vestigingsplaats notaris">
+            </label>
+
+            <label>
+                <p> Datum van het testament of
+                    van de laatste wijziging</p>
+                <input type="date">
+            </label>
+
+            <input type="submit">
+        </fieldset>
+
+
+        <section>
+            <h2>2 Gegevens gemachtigde</h2>
+            <p>Vul de gegevens van de gemachtigde in. De gemachtigde is degene die namens 1 of meerdere personen en/of
+                instellingen aangifte doet.
+                Het invullen van een telefoonnummer of e-mailadres is niet verplicht, maar wel handig. Dan kunnen wij u
+                makkelijker vragen stellen of uitleg geven.</p>
+        </section>
+
+
+        <fieldset>
+            <legend>
+                <p>2a</p>
+            </legend>
+            <p>Vul 1 van de 3 in: het burgerservicenummer of RSIN van de gemachtigde, het beconnummer van de adviseur of
+                het protocolnummer van de notaris.</p>
+            <label>
+                <p>BSN/RSIN gemachtigde:</p>
+                <input type="text" pattern="\d{1,9}" placeholder="Vul hier je BSN nummer in">
+            </label>
+
+            <label for="">
+                <p> Beconnummer </p>
+                <input type="text" name="protocolnummer" pattern="\d{1,5}"
+                    placeholder="Vul hier het beconnummer van je adviseur in" size="36">
+            </label>
+
+
+
+            <label for="">
+                <p>Protocolnummer notaris:</p>
+                <input type="text" name="protocolnummer" placeholder="Vul hier het protocolnummer van je notaris in"
+                    size="36">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                <p>2b</p>
+            </legend>
+            <label>
+                <p>Naam:</p>
+                <input type="text" name="Naam" placeholder="Vul hier de volledige naam in van de gemachtigde" size="40">
+            </label>
+            <label>
+                <p>Naam instelling:</p>
+                <input type="text" name="Naam" placeholder="Vul hier de volledige naam in van de gemachtigde" size="40">
+            </label>
+
+            <label for="">
+                <p><b> adres</b></p>
+            </label>
+            <input type="radio" name="2.1b" />
+            <label for="2.1b">
+                <p>Adres in Nederland</p>
+            </label>
+            <input type="radio" name="2.1b" />
+            <label for="2.1b">
+                <p>Adres in het buitenland</p>
+            </label>
+
+            <label for="street">
+                <p>Straat:</p>
+                <input type="text" id="street" name="street" placeholder="Vul hier de straatnaam in">
+            </label>
+
+
+            <label for="houseNumber">
+                <p>Huisnummer:</p>
+                <input type="text" id="houseNumber" name="houseNumber" placeholder="Vul hier het huisnummer in...">
+            </label>
+            <label for="zipCode">
+                <p>Postcode:</p>
+                <input type="text" id="zipCode" name="zipCode" placeholder="Vul hier de postcode in...">
+            </label>
+
+            <label for="residence">
+                <p>Woonplaats:</p>
+                <input type="text" id="residence" name="residence" placeholder="Vul hier een woonplaats in...">
+            </label>
+
+            <label for="country">
+                <p>Landcode:</p>
+            </label>
+            <select id="country" name="country">
+                <option value="" disabled selected>Selecteer een land</option>
+                <option value="NL">Nederland</option>
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="GB">United Kingdom</option>
+
+                <!-- Add more countries as needed -->
+            </select>
+            <label for="">
+                <p>Telefoon</p>
+                <input type="tel" name="tel" id="" placeholder=" Vul hier het telsefoonnummer in">
+            </label>
+            <label for="">
+                <p>Email</p>
+                <input type="email" name="email" id="" placeholder="Vul hier het e-mailadres in">
+            </label>
+            <p>verzenden</p>
+            <input type="submit">
+
+        </fieldset>
+
+
+        <section>
+            <h2>3 Voor wie doet u aangifte?</h2>
+            <p>Heeft de overledene in het testament een executeur aangewezen om de erfenis af te handelen?
+                Dan moet de executeur aangifte doen voor alle personen en/of instellingen die iets krijgen uit de
+                nalatenschap (verkrijgers).
+                Lees de toelichting bij vraag 3a..</p>
+        </section>
+
+        <fieldset>
+            <legend>
+                <p>3a</p>
+            </legend>
+            <label for=""></label>
+        </fieldset>
+    </form>
+
+
     <!-- Text input namen-->
     <form action="">
         <fieldset>
@@ -28,7 +278,7 @@
         </fieldset>
     </form>
 
-    <!-- Datumen -->
+    <!-- Datas -->
     <form action="">
         <fieldset>
             <label> Datum overlijden
@@ -78,9 +328,26 @@
     <!-- Adres -->
     <form action=""></form>
     <fieldset>
-        <label for=""> Adres
-            <input type="url" name="Adres" id="">
+        <label for="street">
+            <p>Straat:</p>
+            <input type="text" id="street" name="street" placeholder="Vul hier de straatnaam in">
         </label>
+
+
+        <label for="houseNumber">
+            <p>Huisnummer:</p>
+            <input type="text" id="houseNumber" name="houseNumber" placeholder="Vul hier het huisnummer in...">
+        </label>
+        <label for="zipCode">
+            <p>Postcode:</p>
+            <input type="text" id="zipCode" name="zipCode" placeholder="Vul hier de postcode in...">
+        </label>
+
+        <label for="residence">
+            <p>Woonplaats:</p>
+            <input type="text" id="residence" name="residence" placeholder="Vul hier een woonplaats in...">
+        </label>
+
     </fieldset>
 
     <!-- Tel -->
