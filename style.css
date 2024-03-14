@@ -1,17 +1,23 @@
 html {
-    background-color: lightblue;
+    background-color: var(--achtergrondKader);
+}
+
+:root {
+    --achtergrondKader: #f3f3f3;
+    --hoofdKleur: #01689b;
+    --fontKleur: black;
 }
 
 fieldset {
-    border: solid red 2px;
+    border: solid var(--hoofdKleur) 2px;
     margin: 1em;
     background-color: white;
 }
 
-:invalid {
-    background-color: red;
-}
-
-#additionalInfoFieldset {
+.hidden {
     display: none;
 }
+
+/* :invalid {
+    background-color: red;
+} */

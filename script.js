@@ -14,14 +14,36 @@ document.addEventListener('DOMContentLoaded', function () {
     hideFieldset();
 });
 
-function showFieldset() {
-    var fieldset = document.getElementById('additionalInfoFieldset');
-    fieldset.style.display = 'block';
-}
+// function showFieldset() {
+//     var fieldset = document.getElementById('additionalInfoFieldset');
+//     fieldset.style.display = 'block';
+// }
 
-function hideFieldset() {
-    var fieldset = document.getElementById('additionalInfoFieldset');
-    fieldset.style.display = 'none';
-}
+// function hideFieldset() {
+//     var fieldset = document.getElementById('additionalInfoFieldset');
+//     fieldset.style.display = 'none';
+// }
 
+// function showHide()
 
+//bron Lars van veldhuizen
+
+// function showFieldset(fieldsetId) {
+//     const fieldset = document.getElementById(fieldsetId);
+//     fieldset.classList.remove('hidden');
+//     console.log(fieldset)
+//     const inputs = fieldset.querySelectorAll('input');
+//     inputs.forEach(function (input) {
+//         input.required = true;
+
+//     });
+// }
+
+// function hideFieldset(fieldsetId) {
+//     const fieldset = document.getElementById(fieldsetId);
+//     fieldset.classList.add('hidden');
+//     const inputs = fieldset.querySelectorAll('input');
+//     inputs.forEach(function (input) {
+//         input.required = false;
+//     });
+// }
