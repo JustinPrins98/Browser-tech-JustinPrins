@@ -18,6 +18,6 @@ fieldset {
     display: none;
 }
 
-/* :invalid {
-    background-color: red;
-} */
+:user-invalid {
+    border: solid red 2px;
+}

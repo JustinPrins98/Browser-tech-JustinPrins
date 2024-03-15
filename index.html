@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
+<!-- - Localstorage: JS schrijven
+
+- Showhide: JS schrijven
+
+- Styling: CSS
+
+- Validation: User-invalid/User-valid, patterns en onblur kan je in CSS doen met not:focus.
+
+- Radio buttons - required
+
+- Voortgang -->
+
 <body>
 
     <form action="submit">
@@ -30,7 +42,7 @@
                 <br>
                 BSN:
                 <br>
-                <input type="text" pattern="\d{1,9}" placeholder="Vul hier je BSN nummer in">
+                <input type="text" pattern="\d{1,9}" placeholder="Vul hier je BSN nummer in" required>
             </label>
             <details>
                 <summary>Waar vind ik het BSN nummer</summary>
@@ -70,10 +82,10 @@
             <fieldset>
                 <legend> Was de overledene getrouwd of had de overledene een
                     geregistreerd partner op het moment van overlijden?</legend>
-                <input type="radio" name="1.1b" value="Ja" data-showFieldset="additionalInfoFieldset" />
-                <label for="1.1b"> Ja</label>
-                <input type="radio" name="1.1b" value="Nee" data-hideFieldset="additionalInfoFieldset" />
-                <label for="1.1b"> Nee ga verder naar C1 </label>
+                <input type="radio" name="1.1b" value="Ja" data-showFieldset="additionalInfoFieldset">
+                <label> Ja</label>
+                <input type="radio" name="1.1b" value="Nee" data-hideFieldset="additionalInfoFieldset">
+                <label> Nee ga verder naar C1 </label>
             </fieldset>
 
             <fieldset id="additionalInfoFieldset">
@@ -83,21 +95,21 @@
                         geregistreerd partner huwelijkse of partnerschapsvoorwaarden
                         laten vastleggen
                         in een notariële akte?</legend>
-                    <input type="radio" name="1.2b" value="ja" />
-                    <label for="1.2b"> Ja</label>
+                    <input type="radio" name="1.2b" value="ja">
+                    <label> Ja</label>
                     <input type="file">
-                    <input type="radio" name="1.2b" value="nee" />
-                    <label for="1.2b"> Nee </label>
+                    <input type="radio" name="1.2b" value="nee">
+                    <label> Nee </label>
                 </fieldset>
 
                 <fieldset>
                     <legend>Hadden de overledene en diens partner een finaal
                         verrekenbeding?</legend>
 
-                    <input type="radio" name="1.3b" value="ja" />
-                    <label for="1.3b"> Ja</label>
-                    <input type="radio" name="1.3b" value="nee" />
-                    <label for="1.3b"> Nee </label>
+                    <input type="radio" name="1.3b" value="ja">
+                    <label> Ja</label>
+                    <input type="radio" name="1.3b" value="nee">
+                    <label> Nee </label>
                 </fieldset>
 
                 <fieldset>
@@ -113,30 +125,30 @@
 
             <fieldset>
                 <legend> Had de overledene kinderen? </legend>
-                </label>
-                <input type="radio" name="1.1c" value="ja" />
-                <label for="1.1c"> Ja</label>
-                <input type="radio" name="1.1c" value="nee" />
-                <label for="1.1c"> Nee. Ga verder met vraag 1d. </label>
+
+                <input type="radio" name="1.1c" value="ja">
+                <label> Ja</label>
+                <input type="radio" name="1.1c" value="nee">
+                <label> Nee. Ga verder met vraag 1d. </label>
             </fieldset>
             <fieldset>
                 <legend>Vraag 1.2c</legend>
                 <fieldset>
                     <legend>Is 1 van deze kinderen eerder overleden dan de
                         overledene voor wie u nu aangifte doet?</legend>
-                    <input type="radio" name="1.2c" value="ja" />
-                    <label for="1.2c"> Ja</label>
-                    <input type="radio" name="1.2c" value="nee" />
-                    <label for="1.2c"> Nee. Ga verder met vraag 1d. </label>
+                    <input type="radio" name="1.2c" value="ja">
+                    <label> Ja</label>
+                    <input type="radio" name="1.2c" value="nee">
+                    <label> Nee. Ga verder met vraag 1d. </label>
                 </fieldset>
                 <fieldset>
                     <legend>Vraag 1.3c</legend>
                     <fieldset>
                         <legend> Had dit overleden kind zelf kinderen?</legend>
-                        <input type="radio" name="1.3c" value="ja" />
-                        <label for="1.3c"> Ja</label>
-                        <input type="radio" name="1.3c" value="nee" />
-                        <label for="1.3c"> Nee </label>
+                        <input type="radio" name="1.3c" value="ja">
+                        <label> Ja</label>
+                        <input type="radio" name="1.3c" value="nee">
+                        <label> Nee </label>
                     </fieldset>
                 </fieldset>
             </fieldset>
@@ -171,10 +183,10 @@
                     er niet uit? Neem dan contact op met het notariskantoor
                 </details>
                 <br>
-                <input type="radio" name="1.1d" value="ja" />
+                <input type="radio" name="1.1d" value="ja">
                 <label> Ja</label>
-                <input type="radio" name="1.1d" value="nee" />
-                <label> Nee. Ga verder met vraag 2.
+                <input type="radio" name="1.1d" value="nee">
+                <label> Nee. Ga verder met vraag 2.</label>
             </fieldset>
 
             <fieldset>
@@ -320,7 +332,7 @@
                     <br>
                     Straat:
                     <br>
-                    <input type="text" id="street" name="street" placeholder="Vul hier de straatnaam in">
+                    <input type="text" id="street2" name="street2" placeholder="Vul hier de straatnaam in">
                 </label>
 
 
@@ -328,20 +340,21 @@
                     <br>
                     Huisnummer:
                     <br>
-                    <input type="text" id="houseNumber" name="houseNumber" placeholder="Vul hier het huisnummer in...">
+                    <input type="text" id="houseNumber2" name="houseNumber2"
+                        placeholder="Vul hier het huisnummer in...">
                 </label>
                 <label>
                     <br>
                     Postcode:
                     <br>
-                    <input type="text" id="zipCode" name="zipCode" placeholder="Vul hier de postcode in...">
+                    <input type="text" id="zipCode2" name="zipCode2" placeholder="Vul hier de postcode in...">
                 </label>
 
                 <label>
                     <br>
                     Woonplaats:
                     <br>
-                    <input type="text" id="residence" name="residence" placeholder="Vul hier een woonplaats in...">
+                    <input type="text" id="residence2" name="residence2" placeholder="Vul hier een woonplaats in...">
                 </label>
 
                 <label>
@@ -385,7 +398,7 @@
                 3a
             </legend>
             <label>
-                <input type="radio" name="3a-1" value="executeur" />
+                <input type="radio" name="3a-1" value="executeur">
 
                 Ik ben executeur en doe aangifte voor alle personen en/of instellingen die
                 iets krijgen uit de nalatenschap (verkrijgers). Geef aan voor hoeveel verkrijgers u
@@ -393,7 +406,7 @@
             </label>`
             <input type="number">
             <br>
-            <input type="radio" name="3a-1" value="geenExecuteur" />
+            <input type="radio" name="3a-1" value="geenExecuteur">
             <label>
                 Er is geen executeur aangewezen
             </label>
@@ -404,22 +417,22 @@
                     Geef aan voor hoeveel verkrijgers u aangifte doet. Tel uzelf ook mee.
                     <br>
                     <input type="radio" name="3a.2" value="erfgenaamEnGemachtigde">
-                    <input type="number">
                 </label>
+                <input type="number">
                 <label> <br>Ik ben erfgenaam en doe samen met andere erfgenamen aangifte.
                     Geef het aantal personen en/of instellingen aan die iets krijgen uit de nalatenschap
                     (verkrijgers). Tel uzelf ook mee. <br>
                     <input type="radio" name="3a.2" value="erfgenaamSamen">
-                    <input type="number">
                 </label>
+                <input type="number">
                 <label> <br>Ik ben erfgenaam en doe alleen aangifte voor mijzelf. <br>
                     <input type="radio" name="3a.2" value="erfgenaamAlleen">
                 </label>
                 <label> <br> Ik ben geen erfgenaam, maar ben gemachtigd om aangifte te doen.
                     Geef aan voor hoeveel verkrijgers u aangifte doet. <br>
                     <input type="radio" name="3a.2" value="geenErfgenaamGemachtigde">
-                    <input type="number">
                 </label>
+                <input type="number">
 
             </fieldset>
         </fieldset>
@@ -478,18 +491,18 @@
                     <legend>Krijgt deze verkrijger waarvoor u geen aangifte doet het hele
                         vermogen?</legend>
 
-                    <input type="radio" name="Verkrijger1-3b.1" value="ja" />
+                    <input type="radio" name="Verkrijger1-3b.1" value="ja">
                     <label> Ja</label>
-                    <input type="radio" name="Verkrijger1-3b.1" value="nee" />
+                    <input type="radio" name="Verkrijger1-3b.1" value="nee">
                     <label> Nee </label>
                 </fieldset>
 
                 <fieldset>
                     <legend>Doet deze verkrijger een beroep op diens legitieme portie
                         (wettelijke erfdeel)?</legend>
-                    <input type="radio" name="Verkrijger1-3b.2" value="ja" />
+                    <input type="radio" name="Verkrijger1-3b.2" value="ja">
                     <label> Ja</label>
-                    <input type="radio" name="Verkrijger1-3b.2" value="nee" />
+                    <input type="radio" name="Verkrijger1-3b.2" value="nee">
                     <label> Nee </label>
                 </fieldset>
             </fieldset>
@@ -498,7 +511,7 @@
 
 
 
-        </fieldset>
+
 
         <section>
             <h2>3. Voor wie doet u aangifte (vervolg)</h2>
@@ -512,10 +525,10 @@
 
 
 
-                <input type="radio" name="3c.1" />
+                <input type="radio" name="3c.1">
                 <label> Stuur naar iedere verkrijger van (een deel van) de erfenis een eigen belastingaanslag.</label>
                 <br>
-                <input type="radio" name="3c.1" />
+                <input type="radio" name="3c.1">
                 <label> Stuur de belastingaanslag(en) naar de executeur of naar de erfgenaam die ook namens andere
                     personen en/of instellingen
                     die iets krijgen uit de nalatenschap (verkrijgers) aangifte heeft gedaan; dit mag ook de gemachtigde
@@ -547,9 +560,7 @@
                     </legend>
                 </fieldset>
             </fieldset>
-
-
-
+        </fieldset>
     </form>
 
 
