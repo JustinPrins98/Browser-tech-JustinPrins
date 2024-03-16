@@ -15,7 +15,9 @@ document.getElementById('datePickerId').min = new Date(new Date().setMonth(new D
 //     localStorage.setItem('keyName', input.value);
 //     input.innerHTML = localStorage.getItem("value");
 //     // console.log(localStorage.getItem('keyName'));
-// }
+//
+
+// Updated with help from ChatGPT with prompt:nWhen I do refresh my page how do I keep my localstorage value displayed in my input
 
 const input = document.querySelector("input");
 
@@ -34,7 +36,7 @@ function save() {
 }
 
 
-console.log("Hallo")
+
 
 
 
