@@ -1,11 +1,42 @@
-console.log("Kaaspizza HE!")
+
 
 // uitleg script: 
 document.getElementById('datePickerId').max = new Date().toLocaleDateString('fr-ca')
 document.getElementById('datePickerId').min = new Date(new Date().setMonth(new Date().getMonth() - 8)).toLocaleDateString('fr-ca');
 
 // Localstorage
-localStorage
+// const input = document.querySelector("input")
+
+// input.innerHTML = localStorage.getItem("value");
+
+// input.addEventListener("keyup", save);
+
+// function save() {
+//     localStorage.setItem('keyName', input.value);
+//     input.innerHTML = localStorage.getItem("value");
+//     // console.log(localStorage.getItem('keyName'));
+// }
+
+const input = document.querySelector("input");
+
+// Retrieve value from localStorage when the page loads
+window.addEventListener("load", function () {
+    const savedValue = localStorage.getItem("keyName");
+    if (savedValue) {
+        input.value = savedValue;
+    }
+});
+
+input.addEventListener("keyup", save);
+
+function save() {
+    localStorage.setItem('keyName', input.value);
+}
+
+
+console.log("Hallo")
+
+
 
 
 
