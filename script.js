@@ -1,4 +1,4 @@
-
+document.documentElement.classList.add('javascript');
 
 // uitleg script: 
 document.getElementById('datePickerId').max = new Date().toLocaleDateString('fr-ca')
@@ -19,21 +19,64 @@ document.getElementById('datePickerId').min = new Date(new Date().setMonth(new D
 
 // Updated with help from ChatGPT with prompt:nWhen I do refresh my page how do I keep my localstorage value displayed in my input
 
-const input = document.querySelector("input");
+// const input = document.querySelector("input");
 
-// Retrieve value from localStorage when the page loads
+// // Retrieve value from localStorage when the page loads
+// window.addEventListener("load", function () {
+//     const savedValue = localStorage.getItem("keyName");
+//     if (savedValue) {
+//         input.value = savedValue;
+//     }
+// });
+
+// input.addEventListener("keyup", save);
+
+// function save() {
+//     localStorage.setItem('keyName', input.value);
+// }
+
+const inputs = document.querySelectorAll("input");
+
+// Voeg een gebeurtenisluisteraar toe om de waarden van lokale opslag te herstellen wanneer de pagina laadt
 window.addEventListener("load", function () {
-    const savedValue = localStorage.getItem("keyName");
-    if (savedValue) {
-        input.value = savedValue;
+    inputs.forEach(function (input) {
+        if (input.type === "radio") {
+            const savedValue = localStorage.getItem(input.name);
+            if (savedValue === input.value) {
+                input.checked = true;
+            }
+        } else {
+            const savedValue = localStorage.getItem(input.name);
+            if (savedValue) {
+                input.value = savedValue;
+            }
+        }
+    });
+});
+
+inputs.forEach(function (input) {
+    if (input.type === "radio") {
+        input.addEventListener("change", function () {
+            saveRadio(input);
+        });
+    } else {
+        input.addEventListener("keyup", function () {
+            save(input);
+        });
     }
 });
 
-input.addEventListener("keyup", save);
-
-function save() {
-    localStorage.setItem('keyName', input.value);
+function save(input) {
+    localStorage.setItem(input.name, input.value);
 }
+
+function saveRadio(input) {
+    if (input.checked) {
+        localStorage.setItem(input.name, input.value);
+    }
+}
+
+
 
 
 
@@ -45,9 +88,11 @@ function save() {
 
 // ShowHideFieldset
 
-document.addEventListener('DOMContentLoaded', function () {
-    hideFieldset();
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//     hideFieldset();
+// });
+
+
 
 // function showFieldset() {
 //     var fieldset = document.getElementById('additionalInfoFieldset');
@@ -61,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // function showHide()
 
-//bron Lars van veldhuizen
+
 
 // function showFieldset(fieldsetId) {
 //     const fieldset = document.getElementById(fieldsetId);
@@ -82,6 +127,8 @@ document.addEventListener('DOMContentLoaded', function () {
 //         input.required = false;
 //     });
 // }
+
+//bron Lars van veldhuizen
 
 document.querySelectorAll('input[type=radio][data-hidefieldset], input[type=radio][data-showfieldset]').forEach(function (showHide) {
     const targetFieldsetId = showHide.dataset.showfieldset || showHide.dataset.hidefieldset;
