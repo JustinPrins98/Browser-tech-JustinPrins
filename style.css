@@ -23,6 +23,7 @@
         --hoofdKleur: #8ecae7;
         --fontKleur: black;
         --fieldsetKleur: #e0eff8;
+        --donderblauwBL: #154273;
     }
 
     main {
@@ -33,7 +34,6 @@
         background-color: var(--fieldsetKleur);
         border: none;
         margin: 2em 0em;
-        position: relative;
     }
 
     section {
@@ -68,9 +68,53 @@
         background-color: var(--fieldsetKleur);
         display: inline-block;
         width: 100%;
-        padding-right: .6em;
-        padding-left: -6em;
+        padding-right: 1.35em;
+        margin-left: -.75em;
+
     }
+
+    .boldLegend {
+        font-weight: bold;
+    }
+
+    input[type="text"] {
+        border: var(--donderblauwBL) solid 1px;
+        width: 50%;
+        border-radius: 1px;
+    }
+
+    summary {
+        color: var(--donderblauwBL);
+        font-size: .8rem;
+    }
+
+    details {
+        font-size: .8rem;
+    }
+
+
+
+
+
+
+
+
+}
+
+@layer components {
+
+    input[type="text"] {
+        border: var(--donderblauwBL) solid 1px;
+        width: 50%;
+        border-radius: 1px;
+    }
+
+    input[type="date"] {
+        border: var(--donderblauwBL) solid 1px;
+        border-radius: 1px;
+    }
+
+
 
 }
 
@@ -101,4 +145,31 @@
             margin: 0em 20em;
         }
     }
+
+    html:has(#BSNInput1:user-invalid) #BSNLabel1::after,
+    html:has(#BSNInput2:user-invalid) #BSNLabel2::after,
+    html:has(#BSNInput3:user-invalid) #BSNLabel3::after,
+    html:has(#BSNInput4:user-invalid) #BSNLabel4::after {
+        content: "Vul een geldig BSN nummer in";
+        color: red;
+        display: block;
+        font-size: .8rem;
+    }
+
+    html:has(#VolledigeNaamInput1:user-invalid) #VolledigeNaamLabel1::after {
+        content: "Vul hier een naam in";
+        color: red;
+        display: block;
+        font-size: .8rem;
+    }
+
+    html:has(#datumInput1:user-invalid) #datumLabel1::after {
+        content: "Vul hier een geldige datum in";
+        color: red;
+        display: block;
+        font-size: .8rem;
+    }
+
+
+
 }

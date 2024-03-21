@@ -38,21 +38,25 @@
                 <legend>
                     Vraag 1a
                 </legend>
-                <label>
+                <label id="VolledigeNaamLabel1">
                     <br>
                     Volledige Naam:
                     <br>
-                    <input type="text" name="NaamOverledene" placeholder="Vul hier je volledige naam in" required>
+                    <input type="text" name="NaamOverledene" placeholder="Vul hier je volledige naam in"
+                        id="VolledigeNaamInput1" required>
                 </label>
 
 
-                <label>
+                <label id="BSNLabel1">
                     <br>
                     BSN:
                     <br>
                     <input type="text" pattern="\d{9,9}" name="BSNOverledene" placeholder="Vul hier je BSN nummer in"
-                        required>
+                        id="BSNInput1" required>
+
                 </label>
+
+
                 <details>
                     <summary>Waar vind ik het BSN nummer</summary>
                     Burgerservicenummer (bsn)
@@ -66,11 +70,12 @@
                     – Nederlandse loonstrook, jaaropgaaf, zorgpas of
                     zorgpolis
                 </details>
-                <label>
+
+                <label id="datumLabel1">
                     <br>
                     Datum overlijden:
                     <br>
-                    <input type="date" id="datePickerId" name="datumoverledene" required>
+                    <input type="date" id="datePickerId" name="datumoverledene" id="datumInput1" required>
                 </label>
             </fieldset>
 
@@ -89,7 +94,7 @@
                     Personen (BRP) van de gemeente
                 </details>
                 <fieldset>
-                    <legend> Was de overledene getrouwd of had de overledene een
+                    <legend class="boldLegend"> Was de overledene getrouwd of had de overledene een
                         geregistreerd partner op het moment van overlijden?</legend>
                     <input type="radio" name="1.1b" value="Ja" data-showFieldset="additionalInfoFieldset" required>
                     <label> Ja</label>
@@ -100,7 +105,7 @@
                 <fieldset id="additionalInfoFieldset" class="hidden">
                     <legend>Vraag 1.2b en 1.3b</legend>
                     <fieldset>
-                        <legend> Hadden de overledene en diens echtgenoot of
+                        <legend class="boldLegend"> Hadden de overledene en diens echtgenoot of
                             geregistreerd partner huwelijkse of partnerschapsvoorwaarden
                             laten vastleggen
                             in een notariële akte?</legend>
@@ -112,7 +117,7 @@
                     </fieldset>
 
                     <fieldset>
-                        <legend>Hadden de overledene en diens partner een finaal
+                        <legend class="boldLegend">Hadden de overledene en diens partner een finaal
                             verrekenbeding?</legend>
 
                         <input type="radio" name="1.3b" value="ja">
@@ -122,7 +127,7 @@
                     </fieldset>
 
                     <fieldset>
-                        <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
+                        <legend class="boldLegend">Datum huwelijkse of partnerschapsvoorwaarden</legend>
 
                         <input type="date" id="datumhuwelijksvoorwaarden" name="datumhuwelijksvoorwaarden">
                     </fieldset>
@@ -133,7 +138,7 @@
                 <legend>Vraag 1c</legend>
 
                 <fieldset>
-                    <legend> Had de overledene kinderen? </legend>
+                    <legend class="boldLegend"> Had de overledene kinderen? </legend>
 
                     <input type="radio" name="1.1c" value="ja" data-showFieldset="additionalInfoFieldset1c" required>
                     <label> Ja</label>
@@ -143,7 +148,7 @@
                 <fieldset class="hidden" id="additionalInfoFieldset1c">
                     <legend>Vraag 1.2c</legend>
                     <fieldset>
-                        <legend>Is 1 van deze kinderen eerder overleden dan de
+                        <legend class="boldLegend">Is 1 van deze kinderen eerder overleden dan de
                             overledene voor wie u nu aangifte doet?</legend>
                         <input type="radio" name="1.2c" value="ja" data-showFieldset="additionalInfoFieldset1.2c">
                         <label> Ja</label>
@@ -153,7 +158,7 @@
                     <fieldset class="hidden" id="additionalInfoFieldset1.2c">
                         <legend>Vraag 1.3c</legend>
                         <fieldset>
-                            <legend> Had dit overleden kind zelf kinderen?</legend>
+                            <legend class="boldLegend"> Had dit overleden kind zelf kinderen?</legend>
                             <input type="radio" name="1.3c" value="ja">
                             <label> Ja</label>
                             <input type="radio" name="1.3c" value="nee">
@@ -168,7 +173,7 @@
             <fieldset>
                 <legend>Vraag 1d</legend>
                 <fieldset>
-                    <legend> Had de overledene een testament?</legend>
+                    <legend class="boldLegend"> Had de overledene een testament?</legend>
 
                     <details>
                         <summary> Toelichting 1d</summary>
@@ -199,7 +204,7 @@
                 </fieldset>
 
                 <fieldset class="hidden" id="additionalInfoFieldset1d">
-                    <legend>Gegevens notaris</legend>
+                    <legend class="boldLegend">Gegevens notaris</legend>
                     <label>
                         <br>
                         Protocolnummer notaris:
@@ -249,16 +254,17 @@
                     2a
                 </legend>
                 <fieldset>
-                    <legend>vul 1 van de 3 in: het burgerservicenummer of RSIN van de gemachtigde, het beconnummer van
+                    <legend class="boldLegend">vul 1 van de 3 in: het burgerservicenummer of RSIN van de gemachtigde,
+                        het beconnummer van
                         de
                         adviseur of
                         het protocolnummer van de notaris.</legend>
-                    <label>
+                    <label id="BSNLabel2">
                         <br>
                         BSN/RSIN gemachtigde:
                         <br>
                         <input type="text" pattern="\d{9,9}" placeholder="Vul hier je BSN nummer in"
-                            name="BSN/RSINgemachtigde" required>
+                            name="BSN/RSINgemachtigde" id="BSNInput2" required>
                     </label>
 
                     <label>
@@ -309,7 +315,7 @@
                         placeholder="Vul hier de volledige naam in van de gemachtigde" required>
                 </label>
                 <fieldset>
-                    <legend>Adres in Nederland</legend>
+                    <legend class="boldLegend">Adres in Nederland</legend>
 
                     <label>
                         <br>
@@ -340,7 +346,7 @@
                     </label>
                 </fieldset>
                 <fieldset>
-                    <legend>Adres in het buitenland</legend>
+                    <legend class="boldLegend">Adres in het buitenland</legend>
 
                     <label>
                         <br>
@@ -418,14 +424,16 @@
                     iets krijgen uit de nalatenschap (verkrijgers). Geef aan voor hoeveel verkrijgers u
                     aangifte doet. Bent u zelf ook verkrijger? Tel uzelf dan ook mee.
                 </label>`
+                <br>
                 <input type="number">
+                <br>
                 <br>
                 <input type="radio" name="3a-1" value="geenExecuteur" data-showFieldset="additionalInfoFieldset3a">
                 <label>
                     Er is geen executeur aangewezen
                 </label>
                 <fieldset class="hidden" id="additionalInfoFieldset3a">
-                    <legend> Geen executeur aangewezen</legend>
+                    <legend class="boldLegend"> Geen executeur aangewezen</legend>
                     <label> <br>Ik ben erfgenaam en ben gemachtigd om aangifte te doen voor meerdere
                         personen en/of instellingen die iets krijgen uit de nalatenschap (verkrijgers).
                         Geef aan voor hoeveel verkrijgers u aangifte doet. Tel uzelf ook mee.
@@ -460,26 +468,27 @@
             <fieldset>
                 <legend>3b</legend>
                 <fieldset>
-                    <legend>Zijn er verkijgers voor wie u geen aangifte doet?</legend>
+                    <legend class="boldLegend">Zijn er verkijgers voor wie u geen aangifte doet?</legend>
                     <br>
                     <input type="radio" name="3b" value="ja" data-showFieldset="additionalInfoFieldset3b" required>
                     <label>Ja. Vul hieronder de gegevens in van de verkrijgers waarvoor u geen aangifte doet.
                         Gaat het om een instelling? Vul dan de naam van de instelling in bij ‘achternaam’.
                         Het invullen van een bsn is niet verplicht, maar wel handig voor ons.</label>
                     <br>
+                    <br>
                     <input type="radio" name="3b" value="nee" data-hideFieldset="additionalInfoFieldset3b">
                     <label>Nee. Ga naar vraag 3c.</label>
                 </fieldset>
                 <fieldset class="hidden" id="additionalInfoFieldset3b">
-                    <legend> Verkrijger 1</legend>
+                    <legend class="boldLegend"> Verkrijger 1</legend>
 
-                    <label>
+                    <label id="BSNLabel3">
                         <br>
                         BSN:
                         <br>
 
                         <input type="text" pattern="\d{9,9}" placeholder="Vul hier je BSN nummer in"
-                            name=" BSNnummerverkrijger1">
+                            name=" BSNnummerverkrijger1" id="BSNInput3">
                     </label>
                     <details>
                         <summary>Waar vind ik het BSN nummer</summary>
@@ -535,14 +544,11 @@
             <fieldset>
                 <legend>Vraag 3c</legend>
                 <fieldset>
-                    <legend> Naar wie wilt u dat wij de aanslag erfbelasting sturen?</legend>
-
-
-
-
+                    <legend class="boldLegend"> Naar wie wilt u dat wij de aanslag erfbelasting sturen?</legend>
                     <input type="radio" name="3c.1" required>
                     <label> Stuur naar iedere verkrijger van (een deel van) de erfenis een eigen
                         belastingaanslag.</label>
+                    <br>
                     <br>
                     <input type="radio" name="3c.1">
                     <label> Stuur de belastingaanslag(en) naar de executeur of naar de erfgenaam die ook namens andere
@@ -569,15 +575,106 @@
                     – Bent u erfgenaam en doet u alleen voor uzelf aangifte? Dan ondertekent u het aangifteformulier
                     zelf bij vraag 4g.</p>
                 <fieldset>
-                    <legend>Vraag 3d</legend>
+                    <legend class="boldLegend">Vraag 3d</legend>
                     <fieldset>
                         <legend>
                             Bent u executeur of
                             gemachtigde?
                         </legend>
+                        <input type="radio" name="3.1d" value="Ja" data-showFieldset="additionalInfoFieldset3d"
+                            required>
+                        <label> Ja</label>
+                        <input type="radio" name="3.1d" value="Nee" data-hideFieldset="additionalInfoFieldset3d">
+                        <label> Nee, Ga verder naar vraag 4. </label>
+                    </fieldset>
+                    <fieldset class="hidden" id="additionalInfoFieldset3d">
+                        <legend class="boldLegend"> Gegevens van de executeur of gemachtigde</legend>
+                        <label id="BSNLabel4">
+                            <br>
+                            BSN/RSIN gemachtigde:
+                            <br>
+                            <input type="text" pattern="\d{9,9}" placeholder="Vul hier je BSN nummer in"
+                                name="BSN/RSINgemachtigde" id="BSNInput4" required>
+                        </label>
+                        <label>
+                            <br>
+                            Protocolnummer notaris:
+                            <br>
+                            <input type="text" name="protocolnummerNotaris2"
+                                placeholder="Vul hier het protocolnummer van je notaris in">
+                        </label>
+                        <label>
+                            <br>
+                            Beconnummer adviseur
+                            <br>
+
+                            <input type="text" name="protocolnummer" pattern="\d{5,5}"
+                                placeholder="Vul hier het beconnummer van je adviseur in" name="BeconnummerAdviseur"
+                                required>
+                        </label>
+                        <details>
+                            <summary>Waar vind ik het beconnummer</summary>Beconnummer
+                            Elke belastingconsulent heeft een beconnummer. U vindt
+                            het beconnummer bijvoorbeeld op de factuur.
+                        </details>
+
+                        <label>
+                            <br>
+                            Volledige Naam:
+                            <br>
+                            <input type="text" name="NaamOverledene" placeholder="Vul hier je volledige naam in"
+                                required>
+                        </label>
+
+                        <label>
+                            <br>
+                            Naam instelling:
+                            <br>
+                            <input type="text" name="naamInstelling"
+                                placeholder="Vul hier de volledige naam in van de gemachtigde" required>
+                        </label>
+
+                        <label>
+                            <br>
+                            Straat:
+                            <br>
+                            <input type="text" name="straatNL" placeholder="Vul hier de straatnaam in">
+                        </label>
+
+
+                        <label>
+                            <br>
+                            Huisnummer:
+                            <br>
+                            <input type="text" name="huisnummerNL" placeholder="Vul hier het huisnummer in...">
+                        </label>
+                        <label>
+                            <br>
+                            Postcode:
+                            <br>
+                            <input type="text" name="postcodeNL" placeholder="Vul hier de postcode in...">
+                        </label>
+
+                        <label>
+                            <br>
+                            Woonplaats:
+                            <br>
+                            <input type="text" name="woonplaatsNL" placeholder="Vul hier een woonplaats in...">
+                        </label>
+                        <label>
+                            <br>
+                            Datum van het testament of
+                            van de laatste wijziging
+                            <br>
+                            <input type="date" id="datumlaatstewijziging" name="datumlaatstewijziging">
+                        </label>
                     </fieldset>
                 </fieldset>
             </fieldset>
+            <section>
+                <h2>Gegevens verkrijgers</h2>
+            </section>
+            <input type="submit">
         </form>
     </main>
 
